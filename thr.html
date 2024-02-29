@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Food Tips</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .tips-list {
+            list-style: none;
+            padding: 0;
+        }
+        .tip {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f1f8e9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .tip:hover {
+            transform: translateY(-5px);
+        }
+        .tip h2 {
+            color: #4caf50;
+            margin-top: 0;
+        }
+        .tip img {
+            display: block;
+            margin: 0 auto 20px;
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Ways to Save Food</h1>
+    <input type="text" id="searchInput" placeholder="Search tips...">
+    <div id="tipsList">
+        <div class="tip">
+            <h2>Store leftovers in airtight containers</h2>
+            <img src="https://via.placeholder.com/400x200" alt="Airtight Containers">
+            <p>Leftovers are a great way to reduce food waste, but they need to be stored properly to maintain freshness and quality. Using airtight containers helps to seal in freshness and prevent food from spoiling too quickly. Be sure to label containers with the date so you know when they were prepared.</p>
+        </div>
+        <div class="tip">
+            <h2>Use freezer bags to store excess produce</h2>
+            <img src="https://via.placeholder.com/400x200" alt="Freezer Bags">
+            <p>If you find yourself with excess fruits or vegetables that you can't use up before they spoil, consider freezing them for later use. Freezer bags are an excellent option for storing produce in the freezer as they help to prevent freezer burn and maintain the quality of the food.</p>
+        </div>
+        <div class="tip">
+            <h2>Plan meals and create a shopping list</h2>
+            <img src="https://via.placeholder.com/400x200" alt="Shopping List">
+            <p>One of the best ways to avoid overbuying food is to plan your meals in advance and create a shopping list based on what you need. By planning ahead, you can ensure that you only buy the items you need and avoid purchasing perishable items that may end up going to waste.</p>
+        </div>
+        <div class="tip">
+            <h2>Learn proper food storage techniques</h2>
+            <img src="https://via.placeholder.com/400x200" alt="Food Storage">
+            <p>Knowing how to store different types of food properly is essential for preventing food waste. Some foods, like fruits and vegetables, are best stored in the refrigerator, while others, like bread and potatoes, are better kept in a cool, dark place. Take the time to learn about the proper storage techniques for the foods you buy to help them last longer.</p>
+        </div>
+        <div class="tip">
+            <h2>Utilize leftovers creatively in new dishes</h2>
+            <img src="https://via.placeholder.com/400x200" alt="Leftover Dishes">
+            <p>Instead of letting leftovers go to waste, try incorporating them into new dishes. Leftover vegetables can be added to soups or stir-fries, while leftover meats can be used to make sandwiches or salads. Get creative with your leftovers to create delicious meals while reducing food waste.</p>
+        </div>
+        <div class="tip">
+            <h2>Donate excess non-perishable items</h2>
+            <img src="https://via.placeholder.com/400x200" alt="Food Donation">
+            <p>If you find yourself with excess non-perishable items that you won't be able to use, consider donating them to your local food bank or charity. Not only will you be helping those in need, but you'll also be reducing food waste by ensuring that the items are used before they expire.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    const searchInput = document.getElementById('searchInput');
+    const tips = document.querySelectorAll('.tip');
+
+    searchInput.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        tips.forEach(function(tip) {
+            const tipText = tip.textContent.toLowerCase();
+            if (tipText.includes(searchTerm)) {
+                tip.style.display = 'block';
+            } else {
+                tip.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
